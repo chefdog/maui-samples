@@ -1,0 +1,6 @@
+@CFG.WebApi_HostAddress = http://localhost:5039
+
+GET {{CFG.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
