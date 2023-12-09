@@ -5,15 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:CFG.MauiSampleApp.Views"
     Shell.FlyoutBehavior="Disabled"
-    Title="CFG.MauiSampleApp">
-
-    <!--<ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:RegistrationView}"
-        Route="MainPage" />-->
+    Title="Maui Sample App">
 
     <TabBar>
-        <Tab Title="One" Icon="{StaticResource IconOne}">
+        <Tab Title="Home" Icon="{StaticResource IconOne}">
             <ShellContent
                 Title="Home"
                 ContentTemplate="{DataTemplate local:MainView}"
