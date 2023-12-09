@@ -23,7 +23,7 @@ namespace CFG.MauiSampleApp.Services
             data = new List<Country>();
         }
 
-        public async Task<IAsyncEnumerable<Country>> GetCountries(CancellationToken token)
+        public async Task<IAsyncEnumerable<Country>> GetCountries()
         {
             var response = await httpClient.GetAsync(this.apiUrl);
             if (response.IsSuccessStatusCode)
