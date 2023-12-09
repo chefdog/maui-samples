@@ -4,6 +4,6 @@ namespace CFG.MauiSampleApp.Services
 {
     public interface ICountryService
     {
-        Task<IAsyncEnumerable<Country>> GetCountries(CancellationToken token);
+        Task<IAsyncEnumerable<Country>> GetCountries();
     }
 }

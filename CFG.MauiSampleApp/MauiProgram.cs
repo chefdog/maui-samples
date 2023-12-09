@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
 using CFG.MauiSampleApp.Services;
+using CFG.MauiSampleApp.Views;
+using CFG.MauiSampleApp.ViewModels;
 
 namespace CFG.MauiSampleApp
 {
@@ -25,6 +27,9 @@ namespace CFG.MauiSampleApp
 
             builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
             builder.Services.AddSingleton<ICountryService, CountryService>();
+
+            builder.Services.AddSingleton<RegistrationViewModel>();
+            builder.Services.AddSingleton<RegistrationView>();
             return builder.Build();
         }
     }
