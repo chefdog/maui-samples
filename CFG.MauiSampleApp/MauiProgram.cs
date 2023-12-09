@@ -18,6 +18,7 @@ namespace CFG.MauiSampleApp
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("fa_solid.ttf", "FontAwesome");
                 });
 
 #if DEBUG
@@ -29,7 +30,10 @@ namespace CFG.MauiSampleApp
             builder.Services.AddSingleton<ICountryService, CountryService>();
 
             builder.Services.AddSingleton<RegistrationViewModel>();
-            builder.Services.AddSingleton<RegistrationView>();
+
+            builder.Services.AddSingleton<MainView>();
+            builder.Services.AddSingleton<RegistrationView>();            
+            builder.Services.AddSingleton<BasicPickerNoMvvMView>();
             return builder.Build();
         }
     }
