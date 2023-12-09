@@ -5,11 +5,39 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:CFG.MauiSampleApp.Views"
     Shell.FlyoutBehavior="Disabled"
-    Title="CFG.MauiSampleApp">
+    Title="Maui Sample App">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:RegistrationView}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Home" Icon="{StaticResource IconOne}">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainView}"
+                Route="Home" />
+        </Tab>
+        <Tab Title="Picker no mvvm" Icon="{StaticResource IconTwo}">
+            <ShellContent
+                Title="Picker no mvvm"
+                ContentTemplate="{DataTemplate local:BasicPickerNoMvvMView}"
+                Route="TwoPage" />
+        </Tab>
+        <Tab Title="Picker mvvm" Icon="{StaticResource IconThree}">
+            <ShellContent
+                Title="Picker mvvm"
+                ContentTemplate="{DataTemplate local:MainView}"
+                Route="CountryPicker" />
+        </Tab>
+        <Tab Title="Registration" Icon="{StaticResource IconFour}">
+            <ShellContent
+                Title="Registration"
+                ContentTemplate="{DataTemplate local:MainView}"
+                Route="Registration" />
+        </Tab>
+        <Tab Title="Profile" Icon="{StaticResource IconFive}">
+            <ShellContent
+                Title="Profile"
+                ContentTemplate="{DataTemplate local:MainView}"
+                Route="Profile" /> 
+        </Tab>
+    </TabBar>
 
 </Shell>
